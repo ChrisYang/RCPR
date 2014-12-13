@@ -38,6 +38,8 @@ RCPR will be created
 Then run 
 
 $./RCRP Model/fern.dat yourfilelist.txt 
+
 e.g.: ./RCPR Model/fern.dat img.txt 
+
 it will save the result to result_img.txt when it finishes
 
