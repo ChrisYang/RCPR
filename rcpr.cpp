@@ -83,10 +83,11 @@ int main( int argc, char** argv )
 	cv::Mat trainposes;
 	cv::Rect facebb;
 	int key = 0;
-	int num_inits = 3;
+	int num_inits = 7;
 	string winname("RCPR");
 	cv::namedWindow(winname,false);
-	num_inits = atoi(argv[3]);
+	if (argc > 3)
+		num_inits = atoi(argv[3]);
 	// std::cout << num_inits << std::endl;
 	std::string imgsfilename = argv[2];
 	std::string modelname = argv[1];
@@ -150,8 +151,8 @@ int main( int argc, char** argv )
 					xs.push_back(inits[ii].at<float>(0,p));// xs.push_back(inits[1].at<float>(0,p));xs.push_back(inits[2].at<float>(0,p));
 					ys.push_back(inits[ii].at<float>(0,p+68));// ys.push_back(inits[1].at<float>(0,p+68));ys.push_back(inits[2].at<float>(0,p+68));
 				}
-				float x = CalcMedianValue(xs)-1;
-				float y = CalcMedianValue(ys)-1;
+				float x = CalcMedianValue(xs);
+				float y = CalcMedianValue(ys);
 				file << x <<" " << y << " ";
 				cv::circle(frame, cv::Point_<int>(x,y),int(1./150.*facebb.width)+1, cv::Scalar(0, 0, 255, 0),int(1./150.*facebb.width)+1);
 			}
