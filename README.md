@@ -16,6 +16,8 @@ Requirements:
 
 ------------------Optional: for creating the model file-------------------------------------
 
+!!SKIP this step if you do not want to create your own model but only to use the trained model I have created.!!
+
 Dowload the matlab code from here: http://www.vision.caltech.edu/xpburgos/ICCV13/
 First, I transform the trained model [regModel.mat] into many .txt file (might be not optimal but it works) and store them in a directory called ferns. A cpp program is used to serialize the txt files into a fern class object file, called fern.dat, which is the model file. You can directly use the fern.dat and ignore the following steps. 
 
