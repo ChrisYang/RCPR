@@ -34,7 +34,7 @@ First, I transform the trained model [regModel.mat] into many .txt file (might b
 -----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------
-For running the model. 
+###For running the model. 
 
 $ make
 
@@ -49,6 +49,6 @@ e.g.: ./RCPR Model/fern.dat img.txt
 it will save the result to result_img.txt when it finishes
 
 ###FAQs
-####Q: Why do i get error when loading the model in Windows?
-####A: The binary model is created in Ubuntu, and it is not made compatiable to Windows os. I have version of txt files if you do need it, please email me. 
+#####Q: Why do i get error when loading the model in Windows?
+#####A: The binary model is created in Ubuntu, and it is not made compatiable to Windows os. I have version of txt files if you do need it, please email me. 
 
