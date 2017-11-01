@@ -121,6 +121,7 @@ bool RandomFerns::Apply_Ferns(cv::Mat img,cv::Rect bbox, cv::Mat& init_pose){
 		posetmp.release();
 	}
 	init_pose = initpose2.clone();
+        return false;
 
 }
 void RandomFerns::get_linepoint(cv::Mat img,cv::Mat init_pose,std::vector<l1l2f1> line_pids, cv::Mat& feats){
